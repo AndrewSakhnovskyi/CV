@@ -1,0 +1,185 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.header
+		align-items: center
+		&.black
+			height: auto
+		&__nav
+			ul
+				margin: 0 
+				li 
+					a 
+						span
+							padding: 5px 10px
+							&:after,
+							&:before
+								padding: 5px 10px
+		&__links
+			ul
+				li
+					margin: 0
+
+	.circle
+		&.circle1
+			width: 300px
+			height: 300px
+		&.circle2
+			height: 200px
+			width: 200px
+
+	.work
+		&__desc
+			li 
+				font-size: 18px
+
+			
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header
+		&__nav
+			width: 100%
+			margin-bottom: 20px
+			ul
+				display: flex
+				justify-content: space-around
+		&__links
+			width: 100%
+			ul
+				display: flex
+				justify-content: space-around
+	.circle
+			&.circle1
+				width: 200px
+				height: 200px
+			&.circle2
+				display: none
+
+	.skills
+		&__cards
+			flex-direction: column
+		&__card
+			width: 100%
+			height: 300px
+			margin-bottom: 20px
+
+	.work
+		flex-direction: column
+		&__box
+			margin-bottom: 20px
+			width: 100%
+		&__desc
+			li 
+				font-size: 24px
+	.footer
+		&__icon
+			i 
+				font-size: 24px
+			h3
+				font-size: 20px
+			h4
+				font-size: 16px
+		
+	/**/
+
+@media only screen and (max-width : 840px)
+	.footer
+		&__circle
+			margin: 0 auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.header.black
+		padding: 10px 20px
+	.skills
+		&__card
+			height: 400px
+	.work
+		&__desc 
+			ul
+				display: block
+	.footer
+		padding: 50px 50px 60px
+		&__box
+			display: block
+		&__contact
+			flex-direction: column
+		&__icon
+			margin-bottom: 10px
+	
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.header
+		padding: 10px
+		&.black
+			padding: 0
+			position: relative
+		&__nav
+			ul 
+				flex-direction: column
+				li 
+					margin-bottom: 10px
+		&__links
+			ul 
+				li 
+					width: 48px
+					height: 48px
+					a 	
+						line-height: 27px
+	.circle
+		shape-outside: none
+		&.circle1
+			float: none
+			width: 50%
+			margin: 0 auto
+			height: auto
+			border-radius: inherit
+		
+	.skills
+		&__cards
+			padding: 10px
+		&__card
+			height: 500px
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
