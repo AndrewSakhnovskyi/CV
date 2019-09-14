@@ -19,13 +19,19 @@
 
     </div>
 
+    <!-- Header -->
     <header class="header">
-        <nav class="header__nav">
+        <div class="header__nav--open">
+                <a href="#"><i class="fas fa-bars"></i></a>
+        </div>
+            
+        <nav class="header__nav header__mobile">
+                
             <ul>
-                <li><a href="#about" class="active"><span title="About me">About me</span> </a></li>
-                <li><a href="#skills"><span title="Skills">Skills</span></a></li>
-                <li><a href="#work"><span title="What I can">What I can</span></a></li>
-                <li><a href="#contact"><span title="Contact">Contact</span></a></li>
+                <li><a href="#about" class="active"><span class="header__nav-item" title="About me">About me</span> </a></li>
+                <li><a href="#skills"><span class="header__nav-item" title="Skills">Skills</span></a></li>
+                <li><a href="#work"><span class="header__nav-item" title="What I can">What I can</span></a></li>
+                <li><a href="#contact"><span class="header__nav-item" title="Contact">Contact</span></a></li>
             </ul>
         </nav>
         <div class="header__links">
@@ -40,7 +46,9 @@
             </ul>
         </div>
     </header>
+    <!-- End Header -->
 
+    <!-- About -->
     <section class="about" id="about">
         <div class="circle circle1">
             <img src="img/photo1.jpg" alt="Andrii">
@@ -60,7 +68,9 @@
             </p>
         </div>
     </section>
+    <!-- End About -->
 
+    <!-- Skills -->
     <section class="skills" id="skills">
         <div class="skills__cards">
             <div class="skills__card">
@@ -127,7 +137,9 @@
             </div>
         </div>
     </section>
+    <!-- End Skills -->
 
+    <!-- Work -->
     <section class="work" id="work">
         <div class="work__box work__box1">
             <a href="https://wilton-as.netlify.com/" class="work__button">
@@ -231,7 +243,9 @@
             </div>
         </div>
     </section>
+    <!-- End Work -->
 
+    <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="footer__box">
             <div class="footer__contact">
@@ -265,6 +279,7 @@
             </div>
         </div>
     </footer>
+    <!-- End Footer -->
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -277,7 +292,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
 
     <script src="js/scripts.min.js"></script>
 

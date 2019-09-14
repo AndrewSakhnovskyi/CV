@@ -27,12 +27,12 @@ img {
   background: #000;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 101;
 }
 
 .preloader__circle1, .preloader__circle2 {
@@ -111,6 +111,7 @@ img {
 }
 
 .header {
+  position: relative;
   background: #000;
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,11 +136,19 @@ img {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   height: 80px;
-  padding: 10px 50px;
+  padding: 10px 20px;
   z-index: 100;
+  -webkit-transition: .8s;
+  -o-transition: .8s;
+  transition: .8s;
+}
+
+.header__nav--open {
+  display: none;
 }
 
 .header__nav ul {
+  margin: 0;
   list-style: none;
 }
 
@@ -150,7 +159,7 @@ img {
 }
 
 .header__nav ul li a {
-  color: #262626;
+  color: transparent;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 800;
@@ -160,7 +169,7 @@ img {
 
 .header__nav ul li a span {
   display: block;
-  padding: 15px 20px;
+  padding: 10px;
 }
 
 .header__nav ul li a span:before, .header__nav ul li a span:after {
@@ -168,12 +177,12 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 15px 20px;
+  padding: 10px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
 }
 
 .header__nav ul li a span:before {
@@ -271,7 +280,7 @@ img {
   transition: .5s;
   -webkit-transform: rotateY(0deg) scale(0.8);
           transform: rotateY(0deg) scale(0.8);
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .header__links ul li a:hover i {
@@ -454,9 +463,9 @@ img {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   border-radius: 50%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .skills__overlay:hover {
@@ -473,9 +482,9 @@ img {
 .skills__overlay:hover ~ .skills__content {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-transition-delay: 0;
        -o-transition-delay: 0;
           transition-delay: 0;
@@ -614,6 +623,7 @@ img {
   right: 20px;
   outline: none;
   z-index: 10;
+  cursor: pointer;
 }
 
 .work__toggle {
@@ -777,10 +787,9 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
@@ -1125,8 +1134,53 @@ img {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .header.black {
+  .header {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     padding: 10px 20px;
+  }
+  .header__nav--open {
+    display: block;
+  }
+  .header__nav--open:hover i {
+    color: #4FCE43;
+  }
+  .header__nav--open a {
+    display: block;
+    position: relative;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .header__nav--open a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header__mobile {
+    display: none;
+  }
+  .header__mobile--visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 20px;
+    background: #000;
+    z-index: 100;
   }
   .skills__card {
     height: 400px;
@@ -1156,7 +1210,7 @@ img {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .header {
-    padding: 10px;
+    padding: 16px 10px;
   }
   .header.black {
     padding: 0;

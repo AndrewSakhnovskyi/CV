@@ -95,8 +95,38 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.header.black
+	.header
+		flex-wrap: nowrap
+		&.black
 		padding: 10px 20px
+		&__nav
+			&--open 
+				display: block
+				&:hover i
+					color: #4FCE43
+				a 
+					display: block
+					position: relative
+					background: #fff
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					i 
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+		&__mobile
+			display: none
+			&--visible
+				display: flex
+				flex-direction: column
+				position: absolute
+				top: 80px
+				left: 0
+				padding: 20px
+				background: #000 
+				z-index: 100
 	.skills
 		&__card
 			height: 400px
@@ -119,7 +149,7 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.header
-		padding: 10px
+		padding: 16px 10px
 		&.black
 			padding: 0
 			position: relative
