@@ -350,6 +350,10 @@ img {
   margin-bottom: 20px;
 }
 
+.about__text {
+  font-size: 20px;
+}
+
 .circle {
   position: relative;
   overflow: hidden;
