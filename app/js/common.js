@@ -6,8 +6,9 @@ $(window).on('load', function() {
 });
 
 // Menu mobile
-$('.header__nav--open').click(function (e) {
-    e.preventDefault();
+$('.header__nav-link').click(function (e) {
+	e.preventDefault();
+	console.log('1');
 	$('.header__mobile').toggleClass('header__mobile--visible');
 });
 
